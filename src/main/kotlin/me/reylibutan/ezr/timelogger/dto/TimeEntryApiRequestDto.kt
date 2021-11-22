@@ -1,8 +1,8 @@
 package me.reylibutan.ezr.timelogger.dto
 
-class TimeEntryApiRequest(
+class TimeEntryApiRequestDto(
   var projectId: String,
   var issueId: Int?,
   var spentOn: String,
-  var timeEntry: TimeEntry
+  var timeEntry: TimeEntryDto
 )
