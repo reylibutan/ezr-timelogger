@@ -1,3 +1,3 @@
 ## ezr-timelogger
 
-Tool to log timesheet entries. Pilot project to explore Kotlin.
+Tool to submit time entries via API to Easy Redmine using Kotlin
