@@ -1,0 +1,70 @@
+{
+  "design": {
+    "id": 8,
+    "name": "Design"
+  },
+  "development": {
+    "id": 9,
+    "name": "Development"
+  },
+  "review": {
+    "id": 10,
+    "name": "Review"
+  },
+  "admin": {
+    "id": 11,
+    "name": "Admin"
+  },
+  "testing": {
+    "id": 12,
+    "name": "Testing"
+  },
+  "leave": {
+    "id": 14,
+    "name": "Leave"
+  },
+  "meeting": {
+    "id": 13,
+    "name": "Meeting"
+  },
+  "support": {
+    "id": 16,
+    "name": "Support"
+  },
+  "documentation": {
+    "id": 17,
+    "name": "Documentation"
+  },
+  "rnd": {
+    "id": 18,
+    "name": "R&D"
+  },
+  "release_management": {
+    "id": 161,
+    "name": "Release Management"
+  },
+  "platform_support": {
+    "id": 162,
+    "name": "Platform Support"
+  },
+  "db_support": {
+    "id": 163,
+    "name": "DB Support"
+  },
+  "on_site_support": {
+    "id": 164,
+    "name": "On-site Support"
+  },
+  "extra_effort_on_non_zodiac": {
+    "id": 169,
+    "name": "Extra Effort on Non-Zodiac"
+  },
+  "conduct_training": {
+    "id": 176,
+    "name": "Conduct Training"
+  },
+  "requirement": {
+    "id": 177,
+    "name": "Requirement"
+  }
+}
