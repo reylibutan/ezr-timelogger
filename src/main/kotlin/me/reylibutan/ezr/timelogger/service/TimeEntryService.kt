@@ -12,31 +12,55 @@ class TimeEntryService {
   //  val result = "https://support.zodiacportsolutions.com/time_entries.json".httpGet().appendHeader("X-Redmine-API-Key", apiKey).responseString()
 
   fun submitTimeEntry(csvFullPath: String) {
-
-
-
+    val teRequests: List<TimeEntryApiRequestDto> = getTimeEntriesFromCsv(csvFullPath)
+    for (teRequest in teRequests) {
+      println(teRequests)
+    }
   }
 
-  fun getTimeEntriesFromCsv(csvFullPath: String) {
+  private fun getTimeEntriesFromCsv(csvFullPath: String): List<TimeEntryApiRequestDto> {
     val rows: List<Map<String, String>> = csvReader().readAllWithHeader(File(csvFullPath))
     if (rows.isEmpty()) {
-      return
+      return emptyList()
     }
 
-    for (row in rows) {
-//      val csvProjectId = row["projectId"].orEmpty()
-//      val csvIssueId = row["issueId"].orEmpty()
-//      val csvSpentOn = row["spentOn"].orEmpty()
-//      val csvHours = row["hours"].orEmpty()
-//      val csvComments = row["comments"].orEmpty()
-//      val csvActivityId = row["activityId"].orEmpty()
-//
-//      // some data transformation
-//      val issueId = csvIssueId.ifBlank { -1 }
-//
-//      // TODO: to row by row validation here, possibly log if row is problematic, and move on to next row
-//
-//      val teRequestDto = TimeEntryApiRequestDto(projectId, issueId, spentOn, TimeEntryDto(hours, comments, activityId))
+    val teRequests: MutableList<TimeEntryApiRequestDto> = mutableListOf()
+    for ((index, row) in rows.withIndex()) {
+      val projectId = row["projectId"]
+      if (projectId.isNullOrEmpty()) {
+        println("Skipped line ${index + 2}. Project ID cannot be blank")
+        continue
+      }
+
+      val issueId = row["issueId"]
+      if (issueId.isNullOrEmpty()) {
+        println("Skipped line ${index + 2}. Issue ID cannot be blank")
+        continue
+      }
+
+      val spentOn = row["spentOn"]
+      if (spentOn.isNullOrEmpty()) {
+        println("Skipped line ${index + 2}. Spent on cannot be blank")
+        continue
+      }
+
+      val hours = row["hours"]
+      if (hours.isNullOrEmpty()) {
+        println("Skipped line ${index + 2}. Hours cannot be blank")
+        continue
+      }
+
+      val activityId = row["activityId"]
+      if (activityId.isNullOrEmpty()) {
+        println("Skipped line ${index + 2}. Activity ID cannot be blank")
+        continue
+      }
+
+      val comments = row["comments"]
+
+      teRequests.add(TimeEntryApiRequestDto(projectId, issueId.toInt(), spentOn, TimeEntryDto(hours, comments, activityId.toInt())))
     }
+
+    return teRequests
   }
 }

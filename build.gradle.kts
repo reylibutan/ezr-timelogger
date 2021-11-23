@@ -13,9 +13,10 @@ repositories {
 }
 
 dependencies {
+  implementation("org.slf4j:slf4j-simple:1.7.32")
   implementation("com.github.kittinunf.fuel:fuel:2.3.1")
   implementation("com.google.code.gson:gson:2.8.9")
-  implementation("com.github.doyaaaaaken:kotlin-csv-jvm:1.2.0") //for JVM platform
+  implementation("com.github.doyaaaaaken:kotlin-csv-jvm:1.2.0")
   testImplementation(kotlin("test"))
 }
 

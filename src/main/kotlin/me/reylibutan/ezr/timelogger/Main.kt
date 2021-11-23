@@ -8,5 +8,5 @@ fun main() {
   val activityMap = readMappingFile("/activities.json", ActivityDto::class)
   val teSvc: TimeEntryService = TimeEntryService()
 
-  teSvc.submitTimeEntry("D:\\___\\timesheet.csv")
+  teSvc.submitTimeEntry("/Users/reylibutan/src/timesheet.csv")
 }
