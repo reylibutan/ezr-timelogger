@@ -15,6 +15,7 @@ repositories {
 dependencies {
   implementation("com.github.kittinunf.fuel:fuel:2.3.1")
   implementation("com.google.code.gson:gson:2.8.9")
+  implementation("com.github.doyaaaaaken:kotlin-csv-jvm:1.2.0") //for JVM platform
   testImplementation(kotlin("test"))
 }
 
