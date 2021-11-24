@@ -1,20 +1,29 @@
 package me.reylibutan.ezr.timelogger.service
 
 import com.github.doyaaaaaken.kotlincsv.dsl.csvReader
+import com.github.kittinunf.fuel.httpPost
+import com.google.gson.FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES
+import com.google.gson.GsonBuilder
 import me.reylibutan.ezr.timelogger.dto.TimeEntryApiRequestDto
 import me.reylibutan.ezr.timelogger.dto.TimeEntryDto
 import java.io.File
 
 class TimeEntryService {
   // TODO: allow this API-key to be configurable
-  val apiKey = "5a759a7c243ead471351375594ec5653fd1d9f1b"
-  val redmineApiPrefix = "https://support.zodiacportsolutions.com/"
-  //  val result = "https://support.zodiacportsolutions.com/time_entries.json".httpGet().appendHeader("X-Redmine-API-Key", apiKey).responseString()
+  private val apiKey = "5a759a7c243ead471351375594ec5653fd1d9f1b"
+  private val redmineApiPrefix = "https://support.zodiacportsolutions.com/"
 
   fun submitTimeEntry(csvFullPath: String) {
-    val teRequests: List<TimeEntryApiRequestDto> = getTimeEntriesFromCsv(csvFullPath)
+    val gson = GsonBuilder().setFieldNamingPolicy(LOWER_CASE_WITH_UNDERSCORES).create()
+    val teRequests = getTimeEntriesFromCsv(csvFullPath)
+
     for (teRequest in teRequests) {
-      println(teRequests)
+      val (request, response, result) = ("${redmineApiPrefix}time_entries.json").httpPost()
+        .appendHeader("X-Redmine-API-Key", apiKey)
+        .appendHeader("Content-Type", "application/json")
+        .body(gson.toJson(teRequest)).response()
+
+      // TODO: proper result handling, generalize POST request to HttpUtil
     }
   }
 
@@ -58,7 +67,14 @@ class TimeEntryService {
 
       val comments = row["comments"]
 
-      teRequests.add(TimeEntryApiRequestDto(projectId, issueId.toInt(), spentOn, TimeEntryDto(hours, comments, activityId.toInt())))
+      teRequests.add(
+        TimeEntryApiRequestDto(
+          projectId,
+          issueId.toInt(),
+          spentOn,
+          TimeEntryDto(hours, comments, activityId.toInt())
+        )
+      )
     }
 
     return teRequests
