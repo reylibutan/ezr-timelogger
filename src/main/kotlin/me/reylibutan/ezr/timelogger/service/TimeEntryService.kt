@@ -1,7 +1,6 @@
 package me.reylibutan.ezr.timelogger.service
 
 import com.github.doyaaaaaken.kotlincsv.dsl.csvReader
-import com.github.kittinunf.fuel.httpPost
 import com.google.gson.FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES
 import com.google.gson.GsonBuilder
 import me.reylibutan.ezr.timelogger.dto.TimeEntryApiRequestDto
@@ -13,17 +12,35 @@ class TimeEntryService {
   private val apiKey = "5a759a7c243ead471351375594ec5653fd1d9f1b"
   private val redmineApiPrefix = "https://support.zodiacportsolutions.com/"
 
-  fun submitTimeEntry(csvFullPath: String) {
-    val gson = GsonBuilder().setFieldNamingPolicy(LOWER_CASE_WITH_UNDERSCORES).create()
+  fun previewTimeEntries(csvFullPath: String): Map<String, Float> {
+    var hoursPerDateMap: MutableMap<String, Float> = mutableMapOf()
+    val timeEntries = getTimeEntriesFromCsv(csvFullPath)
+
+    for (te in timeEntries) {
+      val date = te.spentOn
+
+      // create key for the first time
+      if (!hoursPerDateMap.contains(date)) hoursPerDateMap[date] = 0f
+
+      // accumulate all hours for each date; this is helpful when checking which dates don't have 8 hours of time entries
+      hoursPerDateMap[date] = hoursPerDateMap[date]?.plus(te.timeEntry.hours.toFloat()) ?: 0f
+    }
+
+    return hoursPerDateMap
+  }
+
+  fun submitTimeEntries(csvFullPath: String) {
     val teRequests = getTimeEntriesFromCsv(csvFullPath)
 
+    val gson = GsonBuilder().setFieldNamingPolicy(LOWER_CASE_WITH_UNDERSCORES).create()
     for (teRequest in teRequests) {
-      val (request, response, result) = ("${redmineApiPrefix}time_entries.json").httpPost()
-        .appendHeader("X-Redmine-API-Key", apiKey)
-        .appendHeader("Content-Type", "application/json")
-        .body(gson.toJson(teRequest)).response()
+//      val (request, response, result) = ("${redmineApiPrefix}time_entries.json").httpPost()
+//        .appendHeader("X-Redmine-API-Key", apiKey)
+//        .appendHeader("Content-Type", "application/json")
+//        .body(gson.toJson(teRequest)).response()
 
       // TODO: proper result handling, generalize POST request to HttpUtil
+      println(teRequest)
     }
   }
 
