@@ -1,0 +1,173 @@
+-----------------------------------------------------------------------------------------------------
+[November 01, 2021] - Monday
+apply and run r71 postgresql baseline script on s0aqa + s01
+
+[November 02, 2021] - Tuesday
+sanity testing for data sync
+
+[November 03, 2021] - Wednesday
+02:00 - 02:15 - COM Check pending messages and reply
+02:15 - 03:00 - 9131158 Pile-up iss89585 db-src changes again (with rebase)
+03:00 - 03:15 - [S0AQA] Sanity - test manifest
+03:15 - 04:00 - Cleanup db-src / Reflect the manual data fixes we did for S0AQA
+
+[November 04, 2021] - Thursday
+09:00 - 10:30 - Test manifest
+10:30 - xx:xx - Privilege issue (case sensitivity)
+-0.50 - Check why core.timeZone is not site defined
+02:00 - 03:00 - Privilege issue (case sensitivity)
+03:00 - 03:15 - 9094600 CPK to iss89585
+03:15 - 03:45 - COM Discussion with VW about tasks / issues / next steps
+03:45 - xx:xx - Fix ZaraEventMessage in ESB
+
+[November 05, 2021] - Friday
+09:45 - xx:xx - 9138855 Check existing behavior of poller manager
+11:30 - 11:45 - COM Discussion with VW about missing CAT_USER_LOGIN for existing users in baseline data
+11:45 - xx:xx - Fix CAT_USER_LOGIN and CAT_USER_ROLE for existing users
+
+-----------------------------------------------------------------------------------------------------
+[November 08, 2021] - Monday
+09:15 - 09:30 - COM Check pending emails / messages
+09:30 - 10:15 - 9131158 Fix issues reported by HW
++0.25 - 93116 Verify if already deployed to LMSQA
++0.25 - COM Discussion with HW about SaaS things and Site Listing Profile
++0.25 - COM Discussion with TT and GW about swipe issue in HHT
+11:45 - 12:00 - 92394 Investigate root cause
+02:00 - 02:15 - COM Discussion with TT and GW about protobuf issue
+02:15 - 04:15 - 92394 Investigate root cause
+05:15 - xx:xx - swipe things
+
+[November 09, 2021] - Tuesday
+09:15 - 09:30 - COM Check p
+09:30 - 09:45 - COM Discussion with VW about testing Manifest in S0AQA-01 and the things discussed with HW the previous day
+09:45 - 10:15 - Start server / Test updated StartServerApp.bat for S0A and S0B
+10:15 - 11:45 - Check DLP for Vessel Visit
+-0.25 - OPS-RDT Build to sdpw9175app
+11:45 - xx:xx - 91976 Implementation
++0.25 - COM LMS Call with Sandy about flickering issue again in UAT
+02:00 - xx:xx - swipe implementation
++0.25 - Create vessel visit for SS0
+
+[November 10, 2021] - Wednesday
+09:30 - xx:xx - 9138892 Consolidate site data changes
+10:00 - 10:30 - COM Discussion with VW about SS0 issues reported by HW
+10:30 - xx:xx - Fix clob / blobs
+-0.25 - STS Scrum
+03:15 - 04:00 - Apply missing site clob data to SS0QA
+04:00 - xx:xx - 9138855
+
+[November 11, 2021] - Thursday
+09:30 - 10:45 - 9138855 Finalize implementation and changesets
+10:45 - 11:00 - STS Update Sprint schedule and tickets
+11:00 - 03:45 - 9131024 Configure flex fields for S0A and S0B
+03:45 - 04:00 - 9138899 COM Talk to Arun and Parth about missing port location
+04:00 - xx:xx -
+
+[November 12, 2021] - Friday
++8.00 - Sick Leave
+
+-----------------------------------------------------------------------------------------------------
+[November 15, 2021] - Monday
+09:30 - 10:00 - COM Check pending messages / emails / reply accordingly
+10:00 - 10:15 - Start S0AQA / S0BQA
+10:15 - 10:30 - Light testing of Manifest submission for both S0A and S0B
+10:30 - xx:xx - Check commodity code issue
+10:45 - xx:xx -
+11:30 - 11:45 - 9088288 Build and deploy to sdpw9175app
+11:45 - 12:00 - Check privilege issue in S0AQA
+02:00 - 03:00 -
+03:15 - 03:45 - COM Discussion with VW about site data change consolidation approach / pending tasks
+
+[November 16, 2021] - Tuesday
++04.00 - Sick Leave
+02:00 - xx:xx - 9138892 Continue with the tool
+-1.00 - [SaaS] Support / Investigate issues found by Harvi
+
+[November 17, 2021] - Wednesday
+fix data - statements referencing old config id
+
+[November 18, 2021] - Thursday
+09:15 - 10:15 - 9095923 Document the procedure / finalize changeset
+10:15 - 10:45 - ---
+10:45 - 11:00 - COM Discussion with VW about going home
+11:00 - 01:00 - 9138872 Implementation
+01:30 - 04:45 - 9131024 Test results / Finalize changes / update Redmine
+-0.25 - STS Scrum
+04:45 - xx:xx - 9139349 Investigate issue
+-0.25 - 9093757 Check how impactful changes are to existing code
+05:30 - xx:xx - 9093757 Rebase changes
+
+[November 18, 2021] - Friday
+09:30 - 10:00 - COM Check emails / messages and reply to them
+10:00 - 10:15 - 9096096 rebase
+10:15 - 11:00 - 9095807 Check Requirement / Start investigation / Study existing scripts
+-0.25 - COM Discussion with VW about missing view in S0AQA TMS
+11:00 - 11:15 - 9139357 Check issue reported by Harvi
+11:15 - xx:xx -
+-0.25 - STS Scrum
+
+-----------------------------------------------------------------------------------------------------
+[November 22, 2021] - Monday
+09:00 - 09:15 - COM Check emails / messages
+09:15 - xx:xx -
+-0.25 - 9093757 RDO Fix review points
+-0.50 - COM Discussion with VW about powershell tasks
+-0.50 - COM Discussion about SaaS things in group chat
+-0.25 - COM Discussion about intro to devops
++0.25 - 9138872 Additional test cases for new Service / new Function scenario
+04:30 - 06:45 - Training for devops
+
+[November 23, 2021] - Tuesday
+09:45 - 10:45 - COM Check pending messages from VW and address them / Check timezone issue
+11:30 - 11:45 - COM Discussion with VW about the CM request needed
+11:45 - 12:00 - 9138943 Check timezone settings in S0AQA
+02:00 - 02:30 - COM Discussion with VW about timezone config / current port
+02:30 - 03:00 - 9138943 Support timezone-related issues
+02:45 - 03:00 - 9138943 Submit CM Request for timezone-related variables
+03:00 - 03:15 - COM Discussion with VW
+03:15 - xx:xx - 9095807 Implementation
+-0.25 - STS Scrum
+05:15 - xx:xx - devops KT
+
+[November 24, 2021] - Wednesday
+09:30 - 11:00 - 9138855 Rebase changes and fix review points from VW
+11:00 - 12:00 - 9096480 Review
+-0.25 - COM Discussion with VW about the review
+-0.25 - SUP Quick support for Earth team regarding flexa fields
+02:00 - 03:30 - 9131127 Review
+-0.25 - STS Scrum
+03:30 - 05:00 - Check db-src changes
+05:00 - 06:30 - devops KT
+06:30 - xx:xx - demo from Darshan
+
+[November 25, 2021] - Thursday
++1.00 - COM Discussion with HW about future plans
+10:00 - xx:xx - Check db-src changes and compile
+11:30 - 12:00 - COM Discussion with VW about plans
+02:00 - 03:00 - Check db-src changes and compile
+03:00 - 03:15 - STS Scrum
+03:15 - 05:00 - Check db-src changes and compile
+-0.50 - COM Discussion with Darshan about code review
+-0.25 - COM Discussion with VW about site creation post process
+
+[November 26, 2021] - Friday
+09:15 - 09:30 - COM Check pending messages / reply to them
+09:30 - 10:15 - 9094257 Create Delivery Plan ticket for S01, S02, S03
++0.25 - 9096480 Move to S02 folder / Execute on SS0QA
++0.25 - 9096480 Move to S02 folder / Execute on SS0QA
++0.25 - 9094257 Update ZARA Version History wiki page
+11:30 - 12:00 - 9138868 Create S02 patch
+02:00 - 03:00 - 9138868 Create S02 patch
+-0.25 - STS Scrum
+05:00 - 06:30 devops KT
+
+
+-----------------------------------------------------------------------------------------------------
+[November 29, 2021] - Monday
+09:15 - 09:30 - STS Update Sprint Schedule
+09:30 - 11:00 - 9139878 Fix review points
+11:00 - 11:15 - 9139878 Finalize changeset / Add note in Redmine / COM to Stephen in group chat
+11:15 - 11:30 - 9095729 Review Requirement
+11:30 - xx:xx - 9095729 Design
+
+-----------------------------------------------------------------------------------------------------
