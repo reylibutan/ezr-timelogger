@@ -62,7 +62,7 @@ class DsrService {
     convertDsrToTimeEntries(outputLines)
   }
 
-  private fun isSkip(line: String): Boolean = line.startsWith("--")
+  private fun isSkip(line: String): Boolean = line.startsWith("--") || line.isBlank()
 
   private fun isDateHeader(line: String): Pair<Boolean, LocalDate> {
     val defaultDateFormat = "MMMM d, yyyy"
@@ -103,9 +103,15 @@ class DsrService {
 
   private fun deduceEndTime(lines: List<String>, startingLineIndex: Int, currStartTime: String): String {
     // we assume it is the last task of the day, so most probably 6:00
-    val defaultEndTime = "06:00"
+    var defaultEndTime = "06:00"
 
     if (startingLineIndex >= lines.size) return defaultEndTime
+
+    val noonTime = LocalTime.of(12, 0)
+    val startTime = timeStringToLocalTime(currStartTime)
+    if (startTime.isBefore(noonTime)) {
+      defaultEndTime = "12:00"
+    }
 
     for (i in startingLineIndex until lines.size) {
       if (isDateHeader(lines[i]).first) return defaultEndTime
@@ -113,10 +119,8 @@ class DsrService {
       val deducedEndTime = getStartTime(lines[i])
       if (deducedEndTime != null) {
         // maybe the end time should be 12:00 noon
-        val startTime = timeStringToLocalTime(currStartTime)
         val endTime = timeStringToLocalTime(deducedEndTime)
 
-        val noonTime = LocalTime.of(12, 0)
         return if (startTime.isBefore(noonTime) && endTime.isAfter(noonTime)) noonTime.toString() else deducedEndTime
       }
     }
@@ -139,14 +143,18 @@ class DsrService {
         continue
       }
 
-      // project id is always "zara"
-      val projectId = "zara"
-
       // deduce hours
-      val hourPair = trimDuration(l)
-      val hours = computeHours(hourPair.first)
+      val hoursPair = trimDuration(l)
+      val hours = computeHours(hoursPair.first)
 
-      println(hours)
+      // deduce issue Id
+      val issueId = deduceIssueId(hoursPair.second)
+
+      // deduce project id based on issue id
+      val projectId = deduceProjectid(issueId)
+      val comments = hoursPair.second.replace()
+
+      println(hoursPair.second)
     }
 
     return entries
@@ -190,8 +198,27 @@ class DsrService {
   }
 
   private fun deduceIssueId(line: String): Int? {
+    // scrum
     if (line.startsWith("STS Scrum", true)) return null
 
-    return null
+    // sick leave
+    if (line.startsWith("SL", true) || line.contains("sick leave", true)) return 29238
+
+    // COM
+    if (line.startsWith("COM", true)) return null
+
+    // normal
+    val possibleIssueId = "^\\d{5,} ".toRegex().find(line)
+    if (possibleIssueId != null) {
+      return possibleIssueId.value.trim().toInt()
+    }
+
+    return -1
+  }
+
+  private fun deduceProjectid(issueId: Int?): String {
+    if (issueId == 29238) return "leave"
+
+    return "zara"
   }
 }

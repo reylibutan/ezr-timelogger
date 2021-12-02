@@ -12,24 +12,24 @@
 +4.00 - SL
 02:00 - 02:15 - COM Check pending messages and reply
 02:15 - 03:00 - 9131158 Pile-up iss89585 db-src changes again (with rebase)
-03:00 - 03:15 - [S0AQA] Sanity - test manifest
-03:15 - 04:00 - Cleanup db-src / Reflect the manual data fixes we did for S0AQA
+03:00 - 03:15 - 9094257 Sanity - test manifest
+03:15 - 04:00 - 9131158 Cleanup db-src / Reflect the manual data fixes we did for S0AQA
 +0.25 - STS Scrum
 
 [November 04, 2021] - Thursday
-09:00 - 10:30 - Test manifest
-10:30 - xx:xx - Privilege issue (case sensitivity)
--0.50 - Check why core.timeZone is not site defined
-02:00 - 03:00 - Privilege issue (case sensitivity)
+09:00 - 10:30 - 9094257 Test manifest
+10:30 - xx:xx - 9131024 Privilege issue (case sensitivity)
+-0.50 - 9138943 Check why core.timeZone is not site defined
+02:00 - 03:00 - 9131024 Privilege issue (case sensitivity)
 03:00 - 03:15 - 9094600 CPK to iss89585
 03:15 - 03:45 - COM Discussion with VW about tasks / issues / next steps
-03:45 - xx:xx - Fix ZaraEventMessage in ESB
+03:45 - xx:xx - 9138855 Fix ZaraEventMessage in ESB
 +0.25 - STS Scrum
 
 [November 05, 2021] - Friday
 09:45 - xx:xx - 9138855 Check existing behavior of poller manager
 11:30 - 11:45 - COM Discussion with VW about missing CAT_USER_LOGIN for existing users in baseline data
-11:45 - xx:xx - Fix CAT_USER_LOGIN and CAT_USER_ROLE for existing users
+11:45 - xx:xx - 9131158 Fix CAT_USER_LOGIN and CAT_USER_ROLE for existing users
 +0.25 - STS Scrum
 
 -----------------------------------------------------------------------------------------------------
