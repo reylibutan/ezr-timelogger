@@ -1,15 +1,17 @@
 package me.reylibutan.ezr.timelogger.service
 
 import java.io.File
+import java.time.Duration
 import java.time.LocalDate
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
 
 class DsrService {
 
-  val varTimeMarker: String = "xx:xx"
+  private val varTimeMarker: String = "xx:xx"
 
   // normalizing just means converting "-" and "+" lines/entries
+  // this is considered as the first pass
   fun normalizeDsr(fullPath: String) {
     val dsrFile = File(fullPath)
     if (!dsrFile.exists()) error("DSR file not found. (filePath = $fullPath)")
@@ -57,9 +59,7 @@ class DsrService {
     }
 
     // TODO: output in a newly created file
-    for (l in outputLines) {
-      println(l)
-    }
+    convertDsrToTimeEntries(outputLines)
   }
 
   private fun isSkip(line: String): Boolean = line.startsWith("--")
@@ -91,7 +91,7 @@ class DsrService {
   }
 
   private fun getEndTime(line: String): String? {
-    return if (line.length > 14) line.substring(8, 13) else null
+    return if (line.length >= 13) line.substring(8, 13) else null
   }
 
   private fun timeStringToLocalTime(timeStr: String): LocalTime {
@@ -122,5 +122,76 @@ class DsrService {
     }
 
     return defaultEndTime
+  }
+
+  // we assume that the lines fed here are "normalized"
+  // this is considered as the second pass
+  private fun convertDsrToTimeEntries(dsr: List<String>): List<String> {
+    val entries = mutableListOf<String>()
+
+    var currDate: LocalDate
+    for (l in dsr) {
+      if (isSkip(l)) continue
+
+      val isDateHeader: Pair<Boolean, LocalDate> = isDateHeader(l)
+      if (isDateHeader.first) {
+        currDate = isDateHeader.second
+        continue
+      }
+
+      // project id is always "zara"
+      val projectId = "zara"
+
+      // deduce hours
+      val hourPair = trimDuration(l)
+      val hours = computeHours(hourPair.first)
+
+      println(hours)
+    }
+
+    return entries
+  }
+
+  // returns a Pair<hoursPart, remainingPart>
+  private fun trimDuration(l: String): Pair<String, String> {
+    var pair = Pair("", l)
+
+    if (l.startsWith("-") || l.startsWith("+")) {
+      pair = Pair(l.substring(0, 5), l.substring(8))
+    } else {
+      val starTime = getStartTime(l)
+      val endTime = getEndTime(l)
+
+      if (!(starTime == null || endTime == null)) {
+        pair = Pair(l.substring(0, 13), l.substring(16))
+      }
+    }
+
+    return pair
+  }
+
+  private fun computeHours(duration: String): Float {
+    var hours = 0f
+
+    if (duration.startsWith("-") || duration.startsWith("+")) {
+      hours = duration.substring(1).toFloat()
+    } else {
+      val starTime = getStartTime(duration)
+      val endTime = getEndTime(duration)
+
+      if (!(starTime == null || endTime == null)) {
+        val sTime = timeStringToLocalTime(starTime)
+        val eTime = timeStringToLocalTime(endTime)
+        hours = (Duration.between(sTime, eTime).toMinutes().toFloat() / 60)
+      }
+    }
+
+    return hours
+  }
+
+  private fun deduceIssueId(line: String): Int? {
+    if (line.startsWith("STS Scrum", true)) return null
+
+    return null
   }
 }

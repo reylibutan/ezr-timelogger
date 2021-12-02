@@ -13,5 +13,6 @@ fun main() {
 //  for (date in hoursPerDate.keys) {
 //    println("<$date> - ${hoursPerDate[date]}")
 //  }
-  DsrService().normalizeDsr("D:\\___\\_lol\\ezr-timelogger\\src\\main\\resources\\timesheet_nov_2021.dsr")
+//  DsrService().normalizeDsr("D:\\___\\_lol\\ezr-timelogger\\src\\main\\resources\\timesheet_nov_2021.dsr")
+  DsrService().normalizeDsr("/Users/reylibutan/IdeaProjects/ezr-timelogger/src/main/resources/timesheet_nov_2021.dsr")
 }

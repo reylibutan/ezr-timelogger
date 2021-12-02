@@ -1,15 +1,20 @@
 -----------------------------------------------------------------------------------------------------
 [November 01, 2021] - Monday
--- apply and run r71 postgresql baseline script on s0aqa + s01
++7.25 - 9131158 Apply and run r71 postgresql baseline script on s0aqa + s01
++0.50 - 9131158 COM with VW about the baseline script creation
++0.25 - STS Scrum
 
 [November 02, 2021] - Tuesday
--- sanity testing for data sync
++7.75 - 9095421 Sanity testing for data sync / Resolve issues
++0.25 - STS Scrum
 
 [November 03, 2021] - Wednesday
++4.00 - SL
 02:00 - 02:15 - COM Check pending messages and reply
 02:15 - 03:00 - 9131158 Pile-up iss89585 db-src changes again (with rebase)
 03:00 - 03:15 - [S0AQA] Sanity - test manifest
 03:15 - 04:00 - Cleanup db-src / Reflect the manual data fixes we did for S0AQA
++0.25 - STS Scrum
 
 [November 04, 2021] - Thursday
 09:00 - 10:30 - Test manifest
@@ -19,10 +24,12 @@
 03:00 - 03:15 - 9094600 CPK to iss89585
 03:15 - 03:45 - COM Discussion with VW about tasks / issues / next steps
 03:45 - xx:xx - Fix ZaraEventMessage in ESB
++0.25 - STS Scrum
 
 [November 05, 2021] - Friday
 09:45 - xx:xx - 9138855 Check existing behavior of poller manager
 11:30 - 11:45 - COM Discussion with VW about missing CAT_USER_LOGIN for existing users in baseline data
 11:45 - xx:xx - Fix CAT_USER_LOGIN and CAT_USER_ROLE for existing users
++0.25 - STS Scrum
 
 -----------------------------------------------------------------------------------------------------
