@@ -1,25 +1,20 @@
 package me.reylibutan.ezr.timelogger.service
 
-import com.github.doyaaaaaken.kotlincsv.dsl.csvReader
+import com.github.kittinunf.fuel.httpPost
 import com.google.gson.FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES
 import com.google.gson.GsonBuilder
 import me.reylibutan.ezr.timelogger.dto.TimeEntryApiRequestDto
 import me.reylibutan.ezr.timelogger.dto.TimeEntryDto
-import java.io.File
 
 class TimeEntryService {
   // TODO: allow this API-key to be configurable
   private val apiKey = "5a759a7c243ead471351375594ec5653fd1d9f1b"
   private val redmineApiPrefix = "https://support.zodiacportsolutions.com/"
 
-  fun previewTimeEntries(csvEntries: List<String>): Map<String, Float> {
-    val timeEntries = csvEntriesToTimeEntries(csvReader().readAllWithHeader(File(csvFullPath)))
-  }
-
-  fun previewTimeEntries(csvFullPath: String): Map<String, Float> {
-    val timeEntries = csvEntriesToTimeEntries(csvReader().readAllWithHeader(File(csvFullPath)))
-
+  fun previewTimeEntries(csvRows: List<Map<String, String>>) {
+    val timeEntries = csvEntriesToTimeEntries(csvRows)
     val hoursPerDateMap: MutableMap<String, Float> = mutableMapOf()
+
     for (te in timeEntries) {
       val date = te.spentOn
 
@@ -30,21 +25,27 @@ class TimeEntryService {
       hoursPerDateMap[date] = hoursPerDateMap[date]?.plus(te.timeEntry.hours.toFloat()) ?: 0f
     }
 
-    return hoursPerDateMap
+    for (e in hoursPerDateMap) {
+      println(e)
+    }
   }
 
-  fun submitTimeEntries(csvFullPath: String) {
-    val teRequests = csvEntriesToTimeEntries(csvFullPath)
+  fun submitTimeEntries(csvRows: List<Map<String, String>>) {
+    val teRequests = csvEntriesToTimeEntries(csvRows)
 
     val gson = GsonBuilder().setFieldNamingPolicy(LOWER_CASE_WITH_UNDERSCORES).create()
     for (teRequest in teRequests) {
-//      val (request, response, result) = ("${redmineApiPrefix}time_entries.json").httpPost()
-//        .appendHeader("X-Redmine-API-Key", apiKey)
-//        .appendHeader("Content-Type", "application/json")
-//        .body(gson.toJson(teRequest)).response()
+      val (request, response, result) = ("${redmineApiPrefix}time_entries.json").httpPost()
+        .appendHeader("X-Redmine-API-Key", apiKey)
+        .appendHeader("Content-Type", "application/json")
+        .body(gson.toJson(teRequest)).response()
 
       // TODO: proper result handling, generalize POST request to HttpUtil
-      println(teRequest)
+      println("------------------------------------------------------------------------------------")
+      println(request)
+      println(response)
+      println(result)
+      println("------------------------------------------------------------------------------------")
     }
   }
 
@@ -58,10 +59,6 @@ class TimeEntryService {
       }
 
       val issueId = row["issueId"]
-      if (issueId.isNullOrEmpty()) {
-        println("Skipped line ${index + 2}. Issue ID cannot be blank")
-        continue
-      }
 
       val spentOn = row["spentOn"]
       if (spentOn.isNullOrEmpty()) {
@@ -86,7 +83,7 @@ class TimeEntryService {
       teRequests.add(
         TimeEntryApiRequestDto(
           projectId,
-          issueId.toInt(),
+          issueId?.toIntOrNull(),
           spentOn,
           TimeEntryDto(hours, comments, activityId.toInt())
         )

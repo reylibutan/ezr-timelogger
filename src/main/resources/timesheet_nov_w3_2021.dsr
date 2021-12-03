@@ -1,0 +1,46 @@
+-----------------------------------------------------------------------------------------------------
+[November 15, 2021] - Monday
+09:30 - 10:00 - COM Check pending messages / emails / reply accordingly
+10:00 - 10:15 - Start S0AQA / S0BQA
+10:15 - 10:30 - Light testing of Manifest submission for both S0A and S0B
+10:30 - xx:xx - Check commodity code issue
+10:45 - xx:xx - 9094257 Overall support
+11:30 - 11:45 - 9088288 Build and deploy to sdpw9175app
+11:45 - 12:00 - Check privilege issue in S0AQA
+02:00 - 03:00 - 9094257 Overall support
+03:15 - 03:45 - COM Discussion with VW about site data change consolidation approach / pending tasks
+03:00 - 07:00 - 9094257 Overall support
+
+[November 16, 2021] - Tuesday
++4.00 - Sick Leave
+02:00 - 05:00 - 9138892 Continue with the tool
++1.00 - [SaaS] Support / Investigate issues found by Harvi
+
+[November 17, 2021] - Wednesday
++7.25 - 9131158 Fix data statements referencing old config id
++0.25 - STS Scrum
++0.50 - 9131158 COM Discussion with VW about approach
+
+[November 18, 2021] - Thursday
+09:15 - 10:15 - 9095923 Document the procedure / finalize changeset
+10:15 - 10:45 - 9094257 Overall support
+10:45 - 11:00 - COM Discussion with VW about going home
+11:00 - 12:00 - 9138872 Implementation
+12:00 - 01:00 - 9138872 Implementation
+01:30 - 04:30 - 9131024 Test results / Finalize changes / update Redmine
++0.25 - STS Scrum
+04:45 - 05:00 - 9139349 Investigate issue
++0.25 - 9093757 Check how impactful changes are to existing code
+05:30 - 06:00 - 9093757 Rebase changes
+
+[November 19, 2021] - Friday
+09:30 - 10:00 - COM Check emails / messages and reply to them
+10:00 - 10:15 - 9096096 rebase
+10:15 - 11:00 - 9095807 Check Requirement / Start investigation / Study existing scripts
++0.25 - COM Discussion with VW about missing view in S0AQA TMS
+11:00 - 11:15 - 9139357 Check issue reported by Harvi
+11:15 - 12:00 - 9094257 Overall support
++5.00 - 9094257 Check issues reported by Harvi
++0.25 - STS Scrum
+
+-----------------------------------------------------------------------------------------------------

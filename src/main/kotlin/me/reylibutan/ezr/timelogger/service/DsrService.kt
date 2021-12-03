@@ -19,7 +19,12 @@ class DsrService {
 
     val inputLines = dsrFile.readLines()
     val normalizedLines = normalizeDsr(inputLines)
-    return convertDsrToTimeEntries(normalizedLines)
+
+    val csvRows: MutableList<String> = mutableListOf()
+    csvRows.add("projectId,issueId,spentOn,hours,comments,activityId")
+    csvRows.addAll(convertDsrToTimeEntries(normalizedLines))
+
+    return csvRows
   }
 
   // normalizing just means converting "-" and "+" lines/entries
@@ -27,8 +32,8 @@ class DsrService {
   private fun normalizeDsr(lines: List<String>): List<String> {
     var currStartTime: String?
     var currEndTime: String?
-
     val outputLines = mutableListOf<String>()
+
     for ((index, it) in lines.withIndex()) {
       var line = it
       // skippable lines
@@ -40,6 +45,7 @@ class DsrService {
       // date header
       val isDateHeader: Pair<Boolean, LocalDate> = isDateHeader(line)
       if (isDateHeader.first) {
+        outputLines.add(line)
         continue
       }
 
@@ -58,6 +64,8 @@ class DsrService {
         }
 
         // parse -
+        // TODO: later
+
         // parse +
         outputLines.add(line)
       }
@@ -221,7 +229,7 @@ class DsrService {
       return possibleIssueId.value.trim().toInt()
     }
 
-    return -1
+    return null
   }
 
   private fun deduceProjectId(issueId: Int?): String {

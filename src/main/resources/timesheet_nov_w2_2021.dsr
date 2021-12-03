@@ -1,0 +1,45 @@
+-----------------------------------------------------------------------------------------------------
+[November 08, 2021] - Monday
+09:15 - 09:30 - COM Check pending emails / messages
+09:30 - 10:15 - 9131158 Fix issues reported by HW
++0.25 - 93116 Verify if already deployed to LMSQA
++0.25 - COM Discussion with HW about SaaS things and Site Listing Profile
++0.25 - COM Discussion with TT and GW about swipe issue in HHT
+11:45 - 12:00 - 92394 Investigate root cause
+02:00 - 02:15 - COM Discussion with TT and GW about protobuf issue
+02:15 - 04:15 - 92394 Investigate root cause
+05:15 - 07:00 - 91976 Automatically swipe swipeable rows on hover
++2.00 - 91976 Automatically swipe swipeable rows on hover
+
+[November 09, 2021] - Tuesday
+09:15 - 09:30 - COM Check p
+09:30 - 09:45 - COM Discussion with VW about testing Manifest in S0AQA-01 and the things discussed with HW the previous day
+09:45 - 10:15 - 9094257 Start server / Test updated StartServerApp.bat for S0A and S0B
+10:15 - 11:30 - Check DLP for Vessel Visit
++0.25 - 9088288 Build to sdpw9175app
+11:45 - xx:xx - 91976 Implementation
++0.25 - COM LMS Call with Sandy about flickering issue again in UAT
+02:00 - 06:45 - 91976 swipe implementation
++0.25 - 9094257 Create vessel visit for SS0
+
+[November 10, 2021] - Wednesday
+09:30 - xx:xx - 9138892 Consolidate site data changes
+10:00 - 10:30 - COM Discussion with VW about SS0 issues reported by HW
+10:30 - 12:00 - Fix clob / blobs
++0.25 - STS Scrum
+03:15 - 04:00 - Apply missing site clob data to SS0QA
+04:00 - 07:30 - 9138855 Implement EntityManagerResolver.getEntityManager(DataSourceId) for aggregated data sync
++1.00 - 9094257 Overall support
+
+[November 11, 2021] - Thursday
+09:30 - 10:45 - 9138855 Finalize implementation and changesets
+10:45 - 11:00 - STS Update Sprint schedule and tickets
+11:00 - 12:00 - 9131024 Configure flex fields for S0A and S0B
+01:00 - 03:45 - 9131024 Configure flex fields for S0A and S0B
+03:45 - 04:00 - 9138899 COM Talk to Arun and Parth about missing port location
+04:00 - 06:30 - 9094257 Overall support
+
+[November 12, 2021] - Friday
++8.00 - Sick Leave
+
+-----------------------------------------------------------------------------------------------------

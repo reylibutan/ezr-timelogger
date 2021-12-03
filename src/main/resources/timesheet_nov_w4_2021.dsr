@@ -1,0 +1,59 @@
+-----------------------------------------------------------------------------------------------------
+[November 22, 2021] - Monday
+09:00 - 09:15 - COM Check emails / messages
+09:15 - xx:xx - 9094257 Overall support
+-0.25 - 9093757 RDO Fix review points
+-0.50 - COM Discussion with VW about powershell tasks
+-0.50 - COM Discussion about SaaS things in group chat
+-0.50 - COM Discussion about intro to devops
++0.50 - 9138872 Additional test cases for new Service / new Function scenario
+04:30 - 06:45 - 9139897 Training for devops
++0.50 - 9094257 Overall support
+
+[November 23, 2021] - Tuesday
+09:45 - 10:45 - COM Check pending messages from VW and address them / Check timezone issue
+11:30 - 11:45 - COM Discussion with VW about the CM request needed
+11:45 - 12:00 - 9138943 Check timezone settings in S0AQA
+02:00 - 02:30 - COM Discussion with VW about timezone config / current port
+02:30 - 03:00 - 9138943 Support timezone-related issues
+02:45 - 03:00 - 9138943 Submit CM Request for timezone-related variables
+03:00 - 03:15 - COM Discussion with VW
+03:15 - xx:xx - 9095807 Implementation
+-0.25 - STS Scrum
+05:15 - 06:30 - 9139897 devops KT
++1.50 - 9094257 Overall support
+
+[November 24, 2021] - Wednesday
+09:30 - 11:00 - 9138855 Rebase changes and fix review points from VW
+11:00 - 12:00 - 9131125 Review
+-0.25 - COM Discussion with VW about the review
+-0.25 - SUP Quick support for Earth team regarding flexa fields
+02:00 - 03:30 - 9131127 Review
+-0.25 - STS Scrum
+03:30 - 05:00 - 9094257 Check db-src changes
+05:00 - 06:30 - 9139897 devops KT
+06:30 - 06:45 - 9131125 COM demo from Darshan
+
+[November 25, 2021] - Thursday
++1.00 - COM Discussion with HW about future plans
+10:00 - xx:xx - 9094257 Check db-src changes and compile
+11:30 - 12:00 - COM Discussion with VW about plans
+02:00 - 03:00 - 9094257 Check db-src changes and compile
+03:00 - 03:15 - STS Scrum
+03:15 - 05:00 - 9094257 Check db-src changes and compile
+-0.50 - COM Discussion with Darshan about code review
+-0.25 - COM Discussion with VW about site creation post process
+05:00 - 06:15 - 9139897 DevOps KT
+
+[November 26, 2021] - Friday
+09:15 - 09:30 - COM Check pending messages / reply to them
+09:30 - 11:00 - 9094257 Create Delivery Plan ticket for S01, S02, S03
++0.25 - 9131125 Move to S02 folder / Execute on SS0QA
++0.25 - 9131125 Move to S02 folder / Execute on SS0QA
++0.25 - 9094257 Update ZARA Version History wiki page
+11:30 - 12:00 - 9138868 Create S02 patch
+02:00 - 05:30 - 9138868 Create S02 patch
++0.25 - STS Scrum
+05:30 - 06:45 - 9139897 devops KT
+
+-----------------------------------------------------------------------------------------------------
