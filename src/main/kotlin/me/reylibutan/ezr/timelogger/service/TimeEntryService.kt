@@ -12,10 +12,14 @@ class TimeEntryService {
   private val apiKey = "5a759a7c243ead471351375594ec5653fd1d9f1b"
   private val redmineApiPrefix = "https://support.zodiacportsolutions.com/"
 
-  fun previewTimeEntries(csvFullPath: String): Map<String, Float> {
-    var hoursPerDateMap: MutableMap<String, Float> = mutableMapOf()
-    val timeEntries = getTimeEntriesFromCsv(csvFullPath)
+  fun previewTimeEntries(csvEntries: List<String>): Map<String, Float> {
+    val timeEntries = csvEntriesToTimeEntries(csvReader().readAllWithHeader(File(csvFullPath)))
+  }
 
+  fun previewTimeEntries(csvFullPath: String): Map<String, Float> {
+    val timeEntries = csvEntriesToTimeEntries(csvReader().readAllWithHeader(File(csvFullPath)))
+
+    val hoursPerDateMap: MutableMap<String, Float> = mutableMapOf()
     for (te in timeEntries) {
       val date = te.spentOn
 
@@ -30,7 +34,7 @@ class TimeEntryService {
   }
 
   fun submitTimeEntries(csvFullPath: String) {
-    val teRequests = getTimeEntriesFromCsv(csvFullPath)
+    val teRequests = csvEntriesToTimeEntries(csvFullPath)
 
     val gson = GsonBuilder().setFieldNamingPolicy(LOWER_CASE_WITH_UNDERSCORES).create()
     for (teRequest in teRequests) {
@@ -44,14 +48,9 @@ class TimeEntryService {
     }
   }
 
-  private fun getTimeEntriesFromCsv(csvFullPath: String): List<TimeEntryApiRequestDto> {
-    val rows: List<Map<String, String>> = csvReader().readAllWithHeader(File(csvFullPath))
-    if (rows.isEmpty()) {
-      return emptyList()
-    }
-
+  private fun csvEntriesToTimeEntries(csvRows: List<Map<String, String>>): List<TimeEntryApiRequestDto> {
     val teRequests: MutableList<TimeEntryApiRequestDto> = mutableListOf()
-    for ((index, row) in rows.withIndex()) {
+    for ((index, row) in csvRows.withIndex()) {
       val projectId = row["projectId"]
       if (projectId.isNullOrEmpty()) {
         println("Skipped line ${index + 2}. Project ID cannot be blank")

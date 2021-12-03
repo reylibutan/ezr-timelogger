@@ -1,5 +1,7 @@
 package me.reylibutan.ezr.timelogger.service
 
+import com.google.gson.internal.LinkedTreeMap
+import me.reylibutan.ezr.timelogger.util.readMappingFile
 import java.io.File
 import java.time.Duration
 import java.time.LocalDate
@@ -9,20 +11,25 @@ import java.time.format.DateTimeFormatter
 class DsrService {
 
   private val varTimeMarker: String = "xx:xx"
+  private val activityMap = readMappingFile("/activities.json", LinkedTreeMap::class)
 
-  // normalizing just means converting "-" and "+" lines/entries
-  // this is considered as the first pass
-  fun normalizeDsr(fullPath: String) {
+  fun dsrToCsv(fullPath: String): List<String> {
     val dsrFile = File(fullPath)
     if (!dsrFile.exists()) error("DSR file not found. (filePath = $fullPath)")
 
-    var currDate: LocalDate? = null
-    var currStartTime: String? = null
-    var currEndTime: String? = null
+    val inputLines = dsrFile.readLines()
+    val normalizedLines = normalizeDsr(inputLines)
+    return convertDsrToTimeEntries(normalizedLines)
+  }
+
+  // normalizing just means converting "-" and "+" lines/entries
+  // this is considered as the first pass
+  private fun normalizeDsr(lines: List<String>): List<String> {
+    var currStartTime: String?
+    var currEndTime: String?
 
     val outputLines = mutableListOf<String>()
-    val inputLines: List<String> = dsrFile.readLines()
-    for ((index, it) in inputLines.withIndex()) {
+    for ((index, it) in lines.withIndex()) {
       var line = it
       // skippable lines
       if (isSkip(line)) {
@@ -33,8 +40,6 @@ class DsrService {
       // date header
       val isDateHeader: Pair<Boolean, LocalDate> = isDateHeader(line)
       if (isDateHeader.first) {
-        currDate = isDateHeader.second
-        outputLines.add(line)
         continue
       }
 
@@ -48,7 +53,7 @@ class DsrService {
       } else {
         // parse xx
         if (currStartTime?.isNotBlank() == true && currEndTime.equals(varTimeMarker, true)) {
-          val deducedEndTime = deduceEndTime(inputLines, index + 1, currStartTime)
+          val deducedEndTime = deduceEndTime(lines, index + 1, currStartTime)
           line = line.replace(varTimeMarker, deducedEndTime)
         }
 
@@ -58,8 +63,7 @@ class DsrService {
       }
     }
 
-    // TODO: output in a newly created file
-    convertDsrToTimeEntries(outputLines)
+    return outputLines
   }
 
   private fun isSkip(line: String): Boolean = line.startsWith("--") || line.isBlank()
@@ -133,10 +137,11 @@ class DsrService {
   private fun convertDsrToTimeEntries(dsr: List<String>): List<String> {
     val entries = mutableListOf<String>()
 
-    var currDate: LocalDate
+    var currDate: LocalDate? = null
     for (l in dsr) {
       if (isSkip(l)) continue
 
+      // deduce current date
       val isDateHeader: Pair<Boolean, LocalDate> = isDateHeader(l)
       if (isDateHeader.first) {
         currDate = isDateHeader.second
@@ -147,14 +152,17 @@ class DsrService {
       val hoursPair = trimDuration(l)
       val hours = computeHours(hoursPair.first)
 
-      // deduce issue Id
+      // deduce issue id
       val issueId = deduceIssueId(hoursPair.second)
 
       // deduce project id based on issue id
-      val projectId = deduceProjectid(issueId)
-      val comments = hoursPair.second.replace()
+      val projectId = deduceProjectId(issueId)
+      val comments = hoursPair.second.replace(issueId.toString(), "").trim()
 
-      println(hoursPair.second)
+      // deduce activity id
+      val activityId = deduceActivityId(l)
+
+      entries.add("$projectId,${issueId ?: ""},$currDate,$hours,\"$comments\",$activityId")
     }
 
     return entries
@@ -216,9 +224,31 @@ class DsrService {
     return -1
   }
 
-  private fun deduceProjectid(issueId: Int?): String {
+  private fun deduceProjectId(issueId: Int?): String {
     if (issueId == 29238) return "leave"
 
     return "zara"
+  }
+
+  private fun deduceActivityId(line: String): Any {
+    when {
+      line.contains("COM", true) -> return getActivityIdByKey("meeting")
+      line.contains("STS", true) -> return getActivityIdByKey("meeting")
+      line.contains("SL", true) -> return getActivityIdByKey("leave")
+      line.contains("sick", true) -> return getActivityIdByKey("leave")
+      line.contains("leave", true) -> return getActivityIdByKey("leave")
+      line.contains("test", true) -> return getActivityIdByKey("testing")
+      line.contains("cpk", true) -> return getActivityIdByKey("development")
+      line.contains("fix ", true) -> return getActivityIdByKey("development")
+      line.contains("check ", true) -> return getActivityIdByKey("support")
+      line.contains("support ", true) -> return getActivityIdByKey("support")
+      line.contains("review ", true) -> return getActivityIdByKey("review")
+    }
+
+    return getActivityIdByKey("development")
+  }
+
+  private fun getActivityIdByKey(key: String): Int {
+    return activityMap[key]!!["id"]!!.toString().toFloat().toInt()
   }
 }
