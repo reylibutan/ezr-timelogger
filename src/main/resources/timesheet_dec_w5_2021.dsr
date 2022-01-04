@@ -1,0 +1,34 @@
+[December 27, 2021] - Monday
++8.00 - 29908 Boxing Day
+
+[December 28, 2021] - Tuesday
+09:30 - 10:00 - COM Check and reply to pending messages / Discussion with BCT BA
+10:00 - 12:00 - 9141210 Deploy CZ1DEV to sdpw9094app
+02:00 - 02:45 - 9141210 Deploy CZ1DEV to sdpw9094app
++0.25 - STS Scrum
+03:00 - 06:00 - 9141465 Fix offline discharge in [master] branch (because of new cargo groupings)
++1.50 - 9094257 Overall support
+
+[December 29, 2021] - Wednesday
++0.25 - COM Check and reply to pending messages
+10:15 - 11:45 - 9141465 Test results for offline discharge updates in [master] branch
+11:45 - 12:00 - 9140933 Recheck the contents of create-patch for S01-S03 (Combined)
+12:30 - 01:00 - 9140933 Recheck the contents of create-patch for S01-S03 (Combined)
++0.25 - STS Scrum
++0.50 - COM Discussion with HW about Flex fields for GC
++2.00 - 9140933 - Try to deploy to sdpw9094app
++2.75 - 9140167 Verify deployment after SaaS rebase activity
+
+[December 30, 2021] - Thursday
++0.50 - COM Check pending emails / messages and respond
++6.25 - 9140933 Fix deployment errors on sdpw9094app (D11, CZ1DEV clone)
++0.25 - STS Scrum
++0.50 - COM Call with Darshan about rebase activity
++0.50 - COM Call with Hari about create-patch
+
+[December 31, 2021] - Friday
++4.00 - Sick Leave
+01:30 - 02:15 - 9141465 Check reported bug by UI team
+02:15 - 03:00 - 9140933 Announcement email for
++0.50 - COM Call with Hari about patch issues I found
++2.00 - 9116707 Early out for Christmas Eve

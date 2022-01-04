@@ -1,0 +1,45 @@
+[December 13, 2021] - Monday
+09:15 - 10:00 - COM MNS PROD Discussion with TT about offline discharge issue
+10:00 - 12:00 - 9140620 r63 Offline discharge issue fix
++0.50 - Discussion with VW about the offline discharge issue
+02:00 - 04:00 - 9140620 r63 Offline discharge issue fix
+04:00 - 04:30 - COM Discussion with Arun about the offline discharge issue
+04:30 - 04:45 - STS Scrum
+04:45 - 06:45 - 9141465 Setup offline mode in [master] branch
+
+[December 14, 2021] - Tuesday
+09:30 - 09:45 - COM Check pending messages / chats / reply
+09:45 - 12:15 - 9140620 Fix review points from VW and additional fixes (e.g. connection timeout)
+01:30 - 02:30 - 9141465 Create test document for offline mode fixes in [r63] branch
+02:30 - 02:45 - 9141465 COM Discussion with Mahesh about offline mode in master branch
+02:45 - 06:15 - 9141465 Check offline mode in [master] branch
++0.50 - 9140620 Prepare env for Maneesh's testing (using sdpw9175app)
+
+[December 15, 2021] - Wednesday
+09:30 - 10:00 - COM Check messages / emails / respond
+10:00 - 12:00 - 9141465 Fix offline mode in [master] branch
+12:00 - 02:15 - 9141465 Fix offline mode in [master] branch
+02:15 - 03:15 - 94017 Find out why LDAP doesn't work in CZ1DEV
++0.25 - STS Scrum
++0.50 - COM Coordinate with ODC for the testing
+04:45 - 05:45 - 9140905 Framework training (Configuration)
+05:45 - 06:15 - 94017 Check LDAP on CZ1DEV
+
+[December 16, 2021] - Thursday
+09:15 - 09:45 - COM Check pending messages / emails / discussion with BA
+09:45 - xx:xx - 9140620 Update API timeout message based on Parth & Arun's request
+10:00 - 10:15 - 9140620 COM With BA about new message / Option 1
+10:15 - 12:15 - 94017 Verify LDAP in iaaa-r5
+02:15 - xx:xx - 94017 Verify LDAP in iaaa-r5
++0.50 - Discussion with TT about LDAP for T4QA
++0.25 - STS Scrum
+05:15 - 06:30 - 9140905 Framework training (Reference Data)
+
+[December 17, 2021] - Friday
++1.00 - COM Discussion with VW about tasks / plans
+10:30 - 12:00 - 9140932 CPK Password masking logic from [master] to [iaaa-r5]
+02:00 - 03:00 - Check LDAP auth in [master]
+03:00 - xx:xx - 9140932 CPK Password masking logic from [master] to [iaaa-r5]
+04:15 - 04:30 - COM Discussion with VW about SaaS merge to [master]
+04:30 - 06:30 - 9140905 Event Framework training from Hari
++1.00 - 9094257 Overall Support

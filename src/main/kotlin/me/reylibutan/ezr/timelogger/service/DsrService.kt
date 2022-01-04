@@ -3,19 +3,19 @@ package me.reylibutan.ezr.timelogger.service
 import com.google.gson.internal.LinkedTreeMap
 import me.reylibutan.ezr.timelogger.util.readMappingFile
 import java.io.File
+import java.lang.Exception
 import java.time.Duration
 import java.time.LocalDate
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
 
 class DsrService {
-
   private val varTimeMarker: String = "xx:xx"
   private val activityMap = readMappingFile("/activities.json", LinkedTreeMap::class)
 
-  fun dsrToCsv(fullPath: String): List<String> {
-    val dsrFile = File(fullPath)
-    if (!dsrFile.exists()) error("DSR file not found. (filePath = $fullPath)")
+  fun dsrToCsv(csvPath: String): List<String> {
+    val dsrFile = File(csvPath)
+    if (!dsrFile.exists()) error("DSR file not found. (filePath = $csvPath)")
 
     val inputLines = dsrFile.readLines()
     val normalizedLines = normalizeDsr(inputLines)
@@ -147,30 +147,35 @@ class DsrService {
 
     var currDate: LocalDate? = null
     for (l in dsr) {
-      if (isSkip(l)) continue
+      try {
+        if (isSkip(l)) continue
 
-      // deduce current date
-      val isDateHeader: Pair<Boolean, LocalDate> = isDateHeader(l)
-      if (isDateHeader.first) {
-        currDate = isDateHeader.second
-        continue
+        // deduce current date
+        val isDateHeader: Pair<Boolean, LocalDate> = isDateHeader(l)
+        if (isDateHeader.first) {
+          currDate = isDateHeader.second
+          continue
+        }
+
+        // deduce hours
+        val hoursPair = trimDuration(l)
+        val hours = computeHours(hoursPair.first)
+
+        // deduce issue id
+        val issueId = deduceIssueId(hoursPair.second)
+
+        // deduce project id based on issue id
+        val projectId = deduceProjectId(issueId)
+        val comments = hoursPair.second.replace(issueId.toString(), "").trim()
+
+        // deduce activity id
+        val activityId = deduceActivityId(l)
+
+        entries.add("$projectId,${issueId ?: ""},$currDate,$hours,\"$comments\",$activityId")
+      } catch (e: Exception) {
+        println("ERROR on line >>> $l")
+        e.printStackTrace()
       }
-
-      // deduce hours
-      val hoursPair = trimDuration(l)
-      val hours = computeHours(hoursPair.first)
-
-      // deduce issue id
-      val issueId = deduceIssueId(hoursPair.second)
-
-      // deduce project id based on issue id
-      val projectId = deduceProjectId(issueId)
-      val comments = hoursPair.second.replace(issueId.toString(), "").trim()
-
-      // deduce activity id
-      val activityId = deduceActivityId(l)
-
-      entries.add("$projectId,${issueId ?: ""},$currDate,$hours,\"$comments\",$activityId")
     }
 
     return entries

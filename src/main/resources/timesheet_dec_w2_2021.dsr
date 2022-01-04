@@ -1,0 +1,38 @@
+[December 06, 2021] - Monday
+09:30 - 09:45 - COM Check emails / messages
+09:45 - 12:00 - 9140366 Prepare patch for S03
+12:00 - 12:15 - COM Discussion with HW about plans
+02:00 - 07:00 - 9140366 Prepare patch for S03
++0.25 - COM Call with Darshan about SaaS testing on PostgreSQL
+
+[December 07, 2021] - Tuesday
+09:30 - 10:00 - 9140366 Check why S0AQA failed to register MDS datasource
+10:00 - 12:00 - 9140366 Check Verify manifest submission on S0AQA
+01:30 - 06:30 - 9140366 Check MIS issue
++0.50 - COM Discussion with VW about the MIS issue
+
+[December 08, 2021] - Wednesday
+09:30 - 09:45 - COM Check emails / messages
+10:30 - 12:00 - 9131127 Add logs to mark completion of each async task
+12:00 - 12:45 - 9140133 Implement global sync to MIS
+12:45 - 02:15 - 9094257 Check Harvi's issue (service events error) / COM with SS0 group
++0.25 - COM Call with Hemant about the MIS sync issue (duplicate EMF bean)
+02:15 - 03:00 - 9094257 Redeploy to S0AQA
+03:00 - 03:15 - STS Scrum
+03:15 - 04:45 - 9140133 Global MIS sync
+04:45 - 05:45 - 9140905 Framework Training (Security)
+05:45 - 06:00 - 9140133 Global MIS sync
+
+[December 09, 2021] - Thursday
+09:30 - 12:00 - 9140133 Global MIS sync
+12:30 - 03:00 - 9140133 Global MIS sync
+03:00 - 03:15 - STS Scrum
+03:15 - xx:xx - 94017 Verification of LDAP in [iaaa-r5]
+
+[December 10, 2021] - Friday
++4.00 - Sick Leave
+02:00 - 02:15 - COM Check pending messages / emails
+02:15 - 02:30 - COM Discuss with Devang about the CAT_COUNTRY index issue
+02:30 - 02:45 - 9140366 Review Devang's scripts
++0.25 - STS Scrum
+03:00 - 06:00 - 94017 Verification of LDAP in [iaaa-r5]

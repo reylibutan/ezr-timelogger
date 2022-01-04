@@ -1,0 +1,51 @@
+[December 20, 2021] - Monday
++4.00 - Sick Leave
+02:00 - 02:30 - COM Check and reply to pending emails / messages
+02:30 - 03:00 - 9094257 Check issue about User List not able to be accessed
+03:00 - 03:15 - STS Scrum
+03:15 - 05:15 - 9094257 Check issue about initial Site User not able to login
+05:15 - 05:30 - COM MNS Discussion with Baby about MNSUAT APK issue
++0.50 - 9094257 Check issue about initial Site User not able to login
+
+[December 21, 2021] - Tuesday
+09:15 - 09:45 - COM Check pending messages and respond
+09:45 - 12:00 - 9094257 Re-create S03 patch / Redeploy S03 (runtime) to S0AQA
++0.25 STS Scrum
+01:30 - 04:15 - 9095965 Fix initial Site User not synced to TMS
+04:15 - 04:30 - 9094257 Support Harvi about her issues
++0.50 - 9095965 Fix initial Site User not synced to TMS
+04:30 - 06:00 - 9140905 Framework training (Event Framework)
+
+[December 22, 2021] - Wednesday
+09:30 - 10:00 - COM Check pending messages / emails and respond
++0.50 - 9140476 Cleanup Sites created from testing and update Delete site scripts (Oracle and PostgreSQL)
+10:15 - 10:30 - STS Housekeeping / cleanup of SaaS tickets
+11:00 - 11:30 - 9116705 HR Meeting
+11:30 - 12:00 - COM Discussion with VW about tasks while he is gone
++0.50 - COM Discussion with VW about rebase exercise
++0.25 - STS Scrum
++0.50 - 9094257 Deploy latest cargo to S0AQA as per Joe's request
+04:00 - 04:30 - 9094257 Tag S03
+03:30 - 06:30 - 9094257 Coordinate and recreate CZ1DEV clone
++1.00 - 9094257 Check the rebase schedule and progress
+
+[December 23, 2021] - Thursday
++4.00 - 9116707 Visa renewal
+02:00 - 02:15 - COM Check pending messages/emails and respond
+02:15 - 02:30 - COM Call with Hari about devops-related changes for SaaS create-patch
+02:30 - 02:45 - COM Call with Darshan about his doubts about the rebase activity
+02:45 - 03:00 - STS Scrum
+03:00 - 03:30 - 9094257 Redeploy MIS and restart S0AQA
+03:30 - 04:00 - 9094257 Apply missing cargo resource strings to S0AQA
+04:00 - 04:30 - 9140167 Re-test submission of manifest using a newly created site
+04:30 - 04:45 - 9140905 Framework Training (evt-src)
+04:45 - 05:00 - COM Call with Ashvin about versioning for rebase activity
+05:15 - 06:15 - SOK ZQ Support for Reference Data module page not accessible
+
+[December 24, 2021] - Friday
+09:30 - 09:45 - COM Check and reply to pending messages / emails
+10:30 - 12:00 - 9141210 Initial patch creation of S01-S03 for D11
+02:00 - 03:15 - 9141210 Prepare CM for CZ1DEV replica in ZARAR
+03:15 - 03:30 - STS Scrum call
+03:30 - 07:00 - 9116707 Early out for Christmas Eve
++1.25 - 9094257 Check the rebase activity

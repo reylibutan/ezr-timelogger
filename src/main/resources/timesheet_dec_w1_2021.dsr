@@ -1,0 +1,35 @@
+[December 01, 2021] - Wednesday
+09:30 - 09:45 - COM Check emails / messages and reply to them
+09:45 - 10:00 - 9138899 Review Devang's changeset and communication
+10:15 - 12:15 - 9138249 Verify S02 (manifest submission and data sync) in D11@HK
+02:15 - 03:15 - 9138249 Verify S02 (manifest submission and data sync) in D11@HK
+03:15 - 03:30 - STS Scrum
+03:30 - 03:45 - 9095807 Continue with install-zara.bat
+03:45 - 04:00 - 9138899 COM Discussion with Parth / Devang / Vincent
+04:00 - 07:00 - 9138249 Check why newly created site can't sync
++0.75 - COM Discussion with Vincent about new datasource issue
+
+[December 02, 2021] - Thursday
+09:30 - 10:00 - COM Check emails / messages / recorded video for SaaS MIS issue
+10:00 - 11:45 - 9140167 Verify fixes / dataasource issue in MIS
+11:45 - 12:00 - 9140167 Verify if newly created site has a correct datasource for MIS
+02:00 - xx:xx - 9140167 Verify if newly created site has a correct datasource for MIS
+02:15 - 02:30 - 9140133 COM Discussion with VW about global sync
+02:30 - 06:45 - 9140167 Verify full workflow using newly created site
++0.25 - STS Scrum
++0.50 - COM Discussion with VW
+
+[December 03, 2021] - Friday
+09:30 - 11:00 - 9140167 Verify full workflow using newly created site
++0.50 - COM Discussion and demo with VW about manifest submission and ref set issue
+11:00 - 11:15 - COM Discussion with VW about team plan
+11:15 - 12:15 - 9140167 Fix reference set for MANIFEST_MSG_FORMAT
+02:00 - 03:00 - 9116701 ADMIN Timesheet
+02:30 - xx:xx - 9140167 Find out why MANIFEST_MSG_FORMAT is still cloned
+03:00 - 03:15 - STS Scrum
+03:15 - 03:45 - COM Discussion with VW about tasks
+03:45 - 04:00 - 9095971 Update the refactor (from 08 to 02 sql file)
+04:00 - 04:30 - 9140167 Add a cat_ref_set_scope record for MANIFEST_MSG_FORMAT without a site_key
+04:30 - 04:45 - 9094257 Review pending items
+04:45 - 05:45 - 9094257 Cleanup of tickets / tasks / sprint schedule
+05:45 - 06:15 - 89493 YUZ Check flex field issue
