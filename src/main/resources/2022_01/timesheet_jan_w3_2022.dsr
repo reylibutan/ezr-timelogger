@@ -1,0 +1,65 @@
+-----------------------------------------------------------------------------------------------------
+[January 17, 2022] - Monday
+10:00 - 10:30 - STS Create needed tickets and update Sprint Schedule
+10:30 - 11:00 - 9142585 Draft guidelines
+11:00 - 12:00 - COM Discussion about tenure
++1.00 - COM Discussion with HR about tenure
+02:00 - 02:15 - COM Discussion with Ashvin about securityservice.asmx and Hari about issue
++0.50 - 9095421 Check if we can safely replace CLASSIC_ZDC_SEC_SERVICE_URL / Prepare CM request
++0.50 - 9142606 Support for TRUCK COMPANY, TRACTOR, DRIVER sync
++0.50 - COM Discussion with Hari about evt-src issue / Find out possible root cause
++3.25 - 9141200 evt-src startup issue after rebase
+
+[January 18, 2022] - Tuesday
++3.50 - 9141200 evt-src blocking (careless mistake)
++0.50 - CM request for CLASSIC_ZDC_SEC_SERVICE_URL
++1.00 - 9142606 Tractor / Truck assignment data sync issue (started)
++0.25 - STS Scrum
++2.00 - 9141200 Help with with the evt-src issue related to pollers
++0.25 - COM Call with Hari about evt-src poller issue
++0.50 - 9142606 Test in CZ1QA for truck sync
+
+[January 19, 2022] - Wednesday
++0.50 - 9095623 Fix logging issue in zara-fdn-lib / Cherry-pick to bct branches
++0.50 - COM Call with VW about truckingcompanytractor sync issue
+01:30 - 02:30 - 9142606 Fix tractor sync issue
+02:30 - 04:45 - 9140932 Fix Config Nature
+04:45 - 06:15 - 9140932 Test Cases
++0.50 - COM Quick discussion with TT about User Profile Preference API
++1.75 - 9142775 Study GLOBAL aggregate sync
+
+[January 20, 2022] - Thursday
+09:30 - 09:45 - 9142585 Update based on VW's review points / Add on DB Wiki
+09:45 - 10:30 - 9142801 Study document shared by VW
+10:30 - 12:00 - 9142775 Fix GLOBAL aggregate sync
+12:00 - 12:30 - COM Discussion with VW about SS0 Refresh patch prep
++0.50 - 9094257 Quick investigation about skipped sql files for R78rc1
+02:00 - 03:30 - 9142775 Fix GLOBAL aggregate sync
+03:30 - 04:00 - 9142801 Check if CM sub can target per folder
+04:00 - 04:30 - COM Discussion with VW about SS0 Refresh
++0.25 - STS Scrum call
+04:45 - 05:15 - 9095421 Prepare CM request for CLASSIC_ZDC_SEC_SERVICE_URL
+05:15 - xx:xx - 9095421 db-src changes to use new CM var for CLASSIC_ZDC_SEC_SERVICE_URL
+06:00 - 06:15 - COM Discussion with VW about SS0 Refresh activity and rollback email to be sent out
+06:15 - 06:30 - 9142801 Draft email for rollback request of SS0,S0A,S0B QA
+
+[January 21, 2022] - Friday
++1.00 - 93758 Review cargo enhancements
++0.50 - COM Discussion with VW about the SS0 Refresh
++0.25 - 9142801 Reservation notice for SS0QA, S0AQA and S0BQA
++0.25 - 9142801 Prepare patch CONF sample for Peter
++0.25 - 9095421 Prepare changeset
+02:30 - 03:00 - 93758 Review and talk to Ravi
++5.00 - 9142801 Create sample patch for review / Manual changes
++0.25 - COM Discussion with Ravi about concerns for Cargo flex fields
+
+-- $LEAVE Public Holiday 29908
+-- $LEAVE Annual 29237
+-- $ADMIN Timesheet 9116701
+-- $ADMIN General 9116707
+-- $_COMMON RDT Deployment 9088288
+-- SS0 Refresh 9142801
+-- SS0 Rebase 9141200
+-- SaaS 9094257
+-- SaaS postgresql baseline 9131158
+-----------------------------------------------------------------------------------------------------

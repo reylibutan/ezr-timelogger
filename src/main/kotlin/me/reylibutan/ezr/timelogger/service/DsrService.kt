@@ -146,7 +146,7 @@ class DsrService {
     val entries = mutableListOf<String>()
 
     var currDate: LocalDate? = null
-    for (l in dsr) {
+    for ((index, l) in dsr.withIndex()) {
       try {
         if (isSkip(l)) continue
 
@@ -173,7 +173,7 @@ class DsrService {
 
         entries.add("$projectId,${issueId ?: ""},$currDate,$hours,\"$comments\",$activityId")
       } catch (e: Exception) {
-        println("ERROR on line >>> $l")
+        println("ERROR on line:${index + 1} >>> $l")
         e.printStackTrace()
       }
     }

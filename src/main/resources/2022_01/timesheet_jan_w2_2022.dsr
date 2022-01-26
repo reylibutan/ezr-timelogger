@@ -1,0 +1,52 @@
+-----------------------------------------------------------------------------------------------------
+[January 10, 2022] - Monday
+09:30 - 09:45 - COM Check and respond to pending messages
+09:45 - 10:00 - 9094257 Rebase own changes before merging to master
+10:00 - 10:45 - 9141200 Check and fix review points from HW
+10:45 - 12:00 - 9141200 Check correctness of converted consolidated site data changes
++5.25 - 9141200 Check correctness of converted consolidated site data changes
++0.25 - STS Scrum call
+
+[January 11, 2022] - Tuesday
+09:30 - 09:45 - COM check and respond to pending messages
+09:45 - xx:xx - 9141200 Check correctness of consolidated site data changes for PostgreSQL
++0.25 - Scrum call
++0.25 - COM Discussion with VW and HW about Event Framework Knowledge Transfer
++0.50 - COM Discussion with VW about tasks / rebase activity
++0.25 - COM Call with Darshan about rebase activity
++0.25 - 9141200 Check why zara-crg [master] is not passing build test
++4.00 - 9141200 Support for R78rc1 and ZARAR deployment
+
+[January 12, 2022] - Wednesday
++0.50 - COM Discussion with VW about ZARAR deployment
++2.00 - 9141200 Upgrade ZARAR base from R76 to R77
++4.00 - 9141200 r78rc1 to ZARAR
++0.25 - STS Scrum
++0.25 - COM Call with Ravi about Flex Field KT
++0.50 - Add SaaS test cases
++0.50 - 9140905 Flex Fields KT Plan
+
+[January 13, 2022] - Thursday
++6.25 - 9141200 Support R78 + SaaS deployment to CZ1DEV
++0.25 - STS Scrum
++1.00 - 9141200 Announce the rebase activity
++0.50 - COM Call with Darshan and Hemant for the ODC DB scripts
+
+[January 14, 2022] - Friday
++4.00 - Sick Leave
+02:00 - 02:15 - COM Check and respond to pending messages / emails
+02:15 - 02:30 - 9141802 CPK ZAC changes for supporting Event (full) in Gather Logs function
++0.50 - COM Discussion with Ken about the transfer
++0.50 - COM Discussion with VW about the next priorities
++2.50 - 9094257 Overall support
+
+-- $LEAVE Public Holiday 29908
+-- $LEAVE Annual 29237
+-- $ADMIN Timesheet 9116701
+-- $ADMIN General 9116707
+-- $_COMMON RDT Deployment 9088288
+-- SS0 Refresh 9142801
+-- SS0 Rebase 9141200
+-- SaaS 9094257
+-- SaaS postgresql baseline 9131158
+-----------------------------------------------------------------------------------------------------

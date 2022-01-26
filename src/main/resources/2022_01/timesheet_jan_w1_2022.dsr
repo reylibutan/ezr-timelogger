@@ -1,0 +1,67 @@
+-----------------------------------------------------------------------------------------------------
+[January 03, 2022] - Monday
++8.00 - 29237 Annual leave
+
+[January 04, 2022] - Tuesday
++4.00 - 9116707 Claim newly renewed/extended visa
+01:45 - 02:00 - 9088288 Build and deploy latest OPS RDT
+02:00 - 02:15 - COM Check and reply to pending messages / emails
+02:15 - 02:30 - 9094257 Check issue with S0AQA unable to submit manifest
+02:30 - 03:00 - 9140167 Retest as per VW's request
+03:00 - 03:45 - 9138593 Compile Flex Mobile PoC changesets
+---
+04:15 - 04:30 - 9141465 Resume cherry-picking password masking to iaaa-r5
+04:30 - 05:00 - 9141802 Add Event (full) as Log File Mapping / Test in CZ1DEV
+05:00 - 05:30 - 9141465 Resume cherry-picking password masking to iaaa-r5
++0.25 - STS Scrum
+05:45 - 06:15 - 9088288 Build and deploy latest OPS RDT
+
+[January 05, 2022] - Wednesday
+09:45 - 10:00 - COM Discussion with VW about his comments on SaaS Rebase Announcement / Update based on his review points
+10:00 - 10:15 - 9141802 Check next deployments for BCTZQ / COM with HW
+10:30 - 11:00 - 9094257 Check why zara-cargo-mobile is inaccessible
+11:00 - 12:15 - 9094257 Check issues reported by Harvi
+---
+02:00 - 02:15 - 9141923 Check unable to register TMS datasource of new Site in core
+02:15 - 02:45 - COM Design discussion with GaryW about new feature to be implemented in GC and OPS RDT
+02:45 - 03:00 - STS Scrum
+03:00 - 06:15 - 9141923 Fix unable to register TMS datasource of new Site in core
++0.50 - COM Discussion with VW and Joe about the duplicated EMF bean for multi-datasource
++1.00 - MNS Support of offline Discharge / COM with BA Babylyn
+
+[January 06, 2022] - Thursday
+09:30 - 10:00 - COM Check and respond to pending messages
+10:00 - 10:15 - 9088288 Build and deploy RDT as per GaryW's request
+10:15 - 12:30 - 9141923 Check multiple datasource issue
+02:00 - 02:45 - 9141923 Check multiple datasource issue
+02:45 - 03:15 - COM Discussion with VW about multi datasource issue
+03:15 - 04:15 - 9141923 Document findings on Redmine
+04:15 - 04:30 - COM Discussion with VW about deployment plan
+04:30 - 05:30 - 9141923 Temp deploy to S0AQA and verify the fix
+05:30 - 06:45 - 9141200 Rebase db-src
++0.25 - STS Scrum call
+
+[January 07, 2022] - Friday
+09:30 - 10:00 - COM Check and respond to pending messages
+10:00 - 10:15 - COM Discussion with VW about next tasks
++4.00 - 9141200 Rebase db-src / COM with HW / VW about the rebase
++0.25 - COM Discussion with Hari about register datasource logic
+03:00 - 03:15 - COM Ask and discuss R78rc1 with Parth / Ripal
+03:15 - 03:30 - COM Quick discussion with Darshan about the next steps for rebase
+03:30 - 03:45 - COM Discussion with VW about the need for PGSQL consolidated data changes
+03:45 - 04:00 - 9141200 Draft CZ1DEV ZOPN DB Dump request email
++0.25 - Scrum call
++0.50 - COM Discussion with VW about previous issues is S01-S03 patch
++0.25 - COM Discussion with Hari about previous issues is S01-S03 patch
++0.25 - COM Discussion with Darshan
++0.75 - 9094257 Overall support
+
+-- $LEAVE Public Holiday 29908
+-- $LEAVE Annual 29237
+-- $ADMIN Timesheet 9116701
+-- $ADMIN General 9116707
+-- $_COMMON RDT Deployment 9088288
+-- SS0 Refresh 9142801
+-- SaaS 9094257
+-- SaaS postgresql baseline 9131158
+-----------------------------------------------------------------------------------------------------
