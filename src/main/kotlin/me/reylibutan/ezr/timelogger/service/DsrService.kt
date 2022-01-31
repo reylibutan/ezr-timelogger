@@ -171,6 +171,10 @@ class DsrService {
         // deduce activity id
         val activityId = deduceActivityId(l)
 
+        if (issueId == null && (!comments.startsWith("COM") && !comments.startsWith("STS"))) {
+          throw Exception("Unable to deduce issue ID: <$l>")
+        }
+
         entries.add("$projectId,${issueId ?: ""},$currDate,$hours,\"$comments\",$activityId")
       } catch (e: Exception) {
         println("ERROR on line:${index + 1} >>> $l")

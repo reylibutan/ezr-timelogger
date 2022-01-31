@@ -1,0 +1,37 @@
+[January 24, 2022] - Monday
++0.50 - COM Check and reply to pending messages
++0.25 - COM Call with VW about flex fields and patch creation
++0.50 - 9142801 Prepare patch for VW's review
++1.00 - COM Study and reply to HW's mentions in Teams related to flex field
++0.25 - COM Discussion with VW about global data sync
++0.75 - 9142801 Draft for SS0 patch request email
++0.25 - STS Scrum
++0.25 - COM Discussion with VW about GLOBAL data sync
++0.50 - 9095778 COM Discussion with TT about his request
++0.50 - 93758 Attend to Hudson's queries / doubts
+03:45 - 04:30 - 9095778 Investigate if we can accommodate a global default given a TYPE
+04:00 - 04:30 - 9142801 Draft email for patch request
++2.00 - 9095421 Resolve failing tests in zara-esb-classic because of SaaS changes
+
+[January 25, 2022] - Tuesday
+09:30 - 12:00 - 9142801 Draft email for patch request (with steps)
++0.25 - COM Call with Darshan about DB errors in PostgreSQL
++5.00 - 9142801 Fix / Support for CZ1QP PostgreSQL DB issues
++0.25 - COM Discussion with Hemant about the issue
+
+[January 26, 2022] - Wednesday
++4.00 - 9116707 Mandatory testing for all ATL employees
++1.0 - 9142801 Fix email
++2.00 - 9142801 Fix SS0 R78 patch
+05:00 - 06:00 - 9140742 Check jenkins unstable build
+
+[January 27, 2022] - Thursday
+02:30 - xx:xx - 9140932 Resume test cases
++0.25 - COM Support to Pankaj for IAAA patch preparation
++0.50 - 9094257 Support for R78 release especially those related to SaaS changes
++0.25 - COM Event issue regarding AppJob
++3.50 - 9143514 config fix
+
+[January 28, 2022] - Friday
++7.00 - 9143514 Config fix (finalize Oracle and PostgreSQL)
++1.00 - 93758 Flex field cargo request delete issue
