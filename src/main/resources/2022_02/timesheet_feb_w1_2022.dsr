@@ -1,0 +1,24 @@
+-----------------------------------------------------------------------------------------------------
+[February 01, 2022] - Tuesday
++8.00 - 29908 Chinese New Year
+
+[February 02, 2022] - Wednesday
++8.00 - 29908 Chinese New Year
+
+[February 03, 2022] - Thursday
++8.00 - 29908 Chinese New Year
+
+[February 04, 2022] - Friday
++0.50 - COM Discussion with VW about SS0 Refresh patch
++4.00 - 9142801 Support and investigate DB issues reported by Stephen /
++3.50 - 9142801 Provide fix for the DB issues reported by Stephen / replicate issues
+
+-- $LEAVE Public Holiday 29908
+-- $LEAVE Annual 29237
+-- $ADMIN Timesheet 9116701
+-- $ADMIN General 9116707
+-- $_COMMON RDT Deployment 9088288
+-- SS0 Refresh 9142801
+-- SaaS 9094257
+-- SaaS postgresql baseline 9131158
+-----------------------------------------------------------------------------------------------------

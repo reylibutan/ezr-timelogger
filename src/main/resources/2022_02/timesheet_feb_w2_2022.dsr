@@ -1,0 +1,45 @@
+-----------------------------------------------------------------------------------------------------
+[February 07, 2022] - Monday
++4.00 - 9142801 Follow-up DB errors with DB patch
++1.00 - 29925 KT to Jai on how to build zara-cargo-mobile and zara-ops-rdt-mobile
++3.00 - 9142801 Recreate SS0QA ZOPN DB locally, test and fix the DB patch / Fix DB views
+
+[February 08, 2022] - Tuesday
++1.00 - 9142801 Test SS0 DB patch in Sunny's test DB (SS0QA ZOPN clone)
++1.00 - 9142801 Summarize SS0 DB patch errors / fixes
++2.00 - 9142801 Resolve config values issue (LONG_TEXT) in SS0QA / Update patch / Coordinate with Enrico
++1.00 - 9142801 Investigate Vessel Visit unable to sync (missing outdated TMS for S0A/S0B)
++3.00 - 9142801 Overall support
+
+[February 09, 2022] - Wednesday
++2.00 - 9142801 SS0 DB patch fixes (non view related)
++3.00 - 9142801 Investigate and fix blocking issues with TMS side by applying the necessary db labels (missing columns in TMS_VESSEL_VISIT)
++3.00 - 9142801 SS0 Refresh sanity testing / DB issue (non-deleted users from before rollback) / other issues
+
+[February 10, 2022] - Thursday
+03:30 - 03:45 - 9142801 List down DB users need to delete in S0AQA / S0BQA TMS
+03:45 - 04:30 - 9142801 Document the issues encountered during refresh
+04:30 - 04:45 - 9142801 Add missing HKS0A to UN
+04:45 - 06:00 - 9142801 Fix cargo mobile configs related to APK version
++1.00 - 9142801 Cargo-mobile startup issue
++4.50 - 9142801 Overall support
+
+[February 11, 2022] - Friday
++1.00 - 9142801 Support for configs with incorrect values
+02:00 - 02:30 - 9142801 Fix missing global entry for core.timeZone
+02:30 - 03:00 - 9142801 Finalize changesets for Parth's review
+03:00 - 05:00 - 9143514 ZARAR vs CZ1DEV_R78p1 config value comparison
++0.50 - 9142801 Follow-up Parth for pending db-src changesets
++3.50 - 9143514 FInish and finalize comparison of ZARAR vs CZ1DEV_R78p1 config entries
+
+-- $LEAVE Public Holiday 29908
+-- $LEAVE Annual 29237
+-- $ADMIN Timesheet 9116701
+-- $ADMIN General 9116707
+-- $_COMMON RDT Deployment 9088288
+-- SS0 Refresh 9142801
+-- SaaS 9094257
+-- SaaS postgresql baseline 9131158
+-- $TRAINING - KNOWLEDGE TRANSFER 29925
+-- CONFIG fix - 9143514
+-----------------------------------------------------------------------------------------------------

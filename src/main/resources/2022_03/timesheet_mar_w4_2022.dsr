@@ -1,0 +1,51 @@
+-----------------------------------------------------------------------------------------------------
+[March 21, 2022] - Monday
++0.50 - 9147183 Help Darshan to test
++1.75 - 9147968 Preapre R80p2 patch
++0.25 - 9147968 Fix VW's review points / Discussion / for R80p2 patch
++0.50 - 9148007 Fix zopn_<site>.sql files
++3.75 - 9095807 Continue implementation
++0.25 - 9148076 Start preparing for R80p3 patch creation
++0.25 - STS Scrum
++0.50 - 9148076 Start SS0 R80p3 patch
++0.25 - 9148007 CPK to [r80] branches
+
+[March 22, 2022] - Tuesday
+09:00 - xx:xx - 9148076 Prepare SS0 R80p3 patch
++0.50 - 9147844 Quick checking of cli issue
++1.00 - 9148076 Create video discussing the manual fixes for SS0 R80p3 patch
++0.25 - STS Scrum
++3.25 - 9095807 Continue implementation
+
+[March 23, 2022] - Wednesday
++0.50 - COM Discussion with VW
++0.25 - STS Scrum
++4.00 - Sick Leave
++3.25 - 9095807 Continue implementation
+
+[March 24, 2022] - Thursday
++0.50 - COM Discussion with VW
++1.00 - 9148076 Compare manually fixed patch with newly-created patch after VW's devops fixes
++6.00- 9095807 Continue implementation
++0.50 - COM Call with Darshan about create-patch issues (zopn_classic_<site>.sql)
+
+[March 25, 2022] - Friday
+09:00 - 09:30 - COM Discussion with VW about manifest submission time filter issue / SS1 R80p3 patch
+09:30 - 10:45 - 9148333 Prepare and coordinate SS1 R80p3 patch
++1.00 - 9144987 Review Ripal's SS0 R80p4 patch
++0.25 - COM Coordinate with VW and Vishal about the filter fix for manifest submission time
+02:00 - 03:30 - 9095807 Continue implementation
++0.25 - STS Scrum
+03:30 - xx:xx - 9139267 Investigate first / Replicate the issue
++0.75 - 9139267 COM Discussion with Mitesh about the approaches
+
+
+-- $LEAVE Public Holiday 29908
+-- $LEAVE Annual 29237
+-- $ADMIN Timesheet 9116701
+-- $ADMIN General 9116707
+-- $_COMMON RDT Deployment 9088288
+-- SS0 Refresh 9142801
+-- SaaS 9094257
+-- SaaS postgresql baseline 9131158
+-----------------------------------------------------------------------------------------------------

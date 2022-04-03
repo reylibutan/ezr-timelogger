@@ -1,0 +1,60 @@
+-----------------------------------------------------------------------------------------------------
+[March 07, 2022] - Monday
++0.50 - COM Check pending messages and emails
+08:00 - 08:15 - 9142801 Find out why 'cargo.request.receive.cargoDetails.bookingOperator.required' value is '=Y'
+08:45 - 11:00 - 9146486 Find out the root cause (global scope accessing site)
++0.25 - COM Discussion with VW about the core.integration.classicZodiac.webService.endpoint
++0.50 - COM Call with Hemant to discuss with issue
+01:15 - 01:45 - 9146486 Provide changeset after confirming fix with Hemant
++0.50 - COM Discussion with VW about next tasks
++2.00 - 9146491 Find out the root cause
++0.25 - STS Scrum
++0.75 - COM Discussion with Jym-P for cargo-mobile related concerns
++0.25 - 9144629 Rebase and merge
+
+[March 08, 2022] - Tuesday
++0.25 - COM Discussion with VW about next tasks
++1.00 - 9146196 Gather logs and update redmine
++1.25 - 9146892 Prepare for cargo-mobile KT with Jym-P (tech writer)
++1.25 - 9146892 KT to Jym-P (tech writer)
++0.50 - 9145912 Quick help to Darshan to create Site
++2.25 - 9146902 Try out configs introduced by Hari for _04_.sql files / Prepare for KT
++1.25 - 9143004 Test global sync in ESB for security entities
++0.25 - STS Scrum
+
+[March 09, 2022] - Wednesday
++1.50 - 9146902 Try out configs introduced by Hari for _04_.sql files (doesn't work)
++0.50 - COM Discussion with VW about tasks / tickets related to SS0
++0.75 - 9146902 Call with Darshan about includeSiteChangesFromBuildNo not reflecting
++0.75 - 9146892 Resolve the questions with Jym-P / COM Talk with GaryW about Device ID
++0.50 - COM Talk with Parth about R80p1 release
++3.75 - 9147015 Prepare R80 patch
++0.25 - STS Scrum call
+
+[March 10, 2022] - Thursday
++0.50 - COM Check and reply to pending messages / chats
+08:15 - 09:15 - 9146486 Fix config for userId and password
++0.50 - 9146486 Add zopn.datasource.timezone
+10:15 - 11:00 - 9147002 Delete S0A site in S0AQA / Recreate S0A
++0.25 - STS Scrum
+01:30 - 02:00 - 9147002 Quick testing after S0A is recreated (up to Manifest submission)
++1.00 - 9147138 Discussion with VW about the problem and the possible fix / Create ticket
++2.00 - 9147015 Compare with Ripal's manual fixes / create R80p1 patch for S0AQA
++1.50 - 9143723 Prepare patch for SS1PROD
+
+[March 11, 2022] - Friday
++1.50 - 9147015 Fix review points from VW / Manually fix the patch
++0.50 - COM Discussion with Vincent about tasks and SS1PROD patch
++5.75 - 9143723 Prepare SS1PROD patch / Investigate issues raised by HW
++0.25 - STS Scrum call
+
+
+-- $LEAVE Public Holiday 29908
+-- $LEAVE Annual 29237
+-- $ADMIN Timesheet 9116701
+-- $ADMIN General 9116707
+-- $_COMMON RDT Deployment 9088288
+-- SS0 Refresh 9142801
+-- SaaS 9094257
+-- SaaS postgresql baseline 9131158
+-----------------------------------------------------------------------------------------------------

@@ -1,0 +1,31 @@
+-----------------------------------------------------------------------------------------------------
+[March 01, 2022] - Tuesday
++5.00 - 9146190 Create patch for r79p2
+03:00 - 03:15 - STS Scrum
+03:15 - 06:00 - 9142847 Resume investigation
+
+[March 02, 2022] - Wednesday
++4.00 - 9146190 Additional support and verification after deployment
++4.00 - 29237 Early flight to Bangkok
+
+[March 03, 2022] - Thursday
++8.00 - 29237 Flight to Bangkok
+
+[March 04, 2022] - Friday
+08:00 - xx:xx - COM Check and reply to pending messages / emails
++0.50 - 9144629 Review Ravi's work (flex mobile)
++0.25 - STS Scrum
++1.50 - 9144634 Fix and provide changeset (missing global config entries)
++0.75 - 9146486 Replicate and provide a fix (global scope accessing site)
++1.00 - 9142801 Cherry-pick [r79] config fixes to [master] branch for r80
+
+
+-- $LEAVE Public Holiday 29908
+-- $LEAVE Annual 29237
+-- $ADMIN Timesheet 9116701
+-- $ADMIN General 9116707
+-- $_COMMON RDT Deployment 9088288
+-- SS0 Refresh 9142801
+-- SaaS 9094257
+-- SaaS postgresql baseline 9131158
+-----------------------------------------------------------------------------------------------------

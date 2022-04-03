@@ -1,0 +1,40 @@
+-----------------------------------------------------------------------------------------------------
+[March 14, 2022] - Monday
+08:00 - 09:00 - 9140476 Delete sites in SS0QA / Update site delete script
++0.25 - COM Discussion with VW about SS1PROD and other tasks
++0.25 - 9143723 Discuss about the errors after execution
++6.50 - 9143723 Prepare SS1PROD patch / fix review points / COM with Parth & Ripal
+
+[March 15, 2022] - Tuesday
++0.50 - 9143723 COM Meeting with HW and VW about DB patch queries
+09:30 - 10:00 - 9138943 Test filtering by time / Verify timezone configs
+10:00 - 10:30 - COM Call with VW about SS1PROD patch and discussion
++0.50 - 9143723 Support for SS1PROD patch creation
++0.25 - 9138943 Document findings in ticket
+01:15 - xx:xx - 9143004 Start implementation / fixes
++1.00 - 9143004 Check that Global Users are synced to TMS / Config fixes
+
+[March 16, 2022] - Wednesday
++5.00 - 9146930 Fix config entries with finest scope == 0 and has site entries
++3.00 - 9095807 Revisit requirements / start implementation
+
+[March 17, 2022] - Thursday
++2.75 - 9095807 Continue implementation of install-zara.bat
++0.25 - COM Discussion with Parth about SS0 R80p2 patch creation
++1.00 - 9147282 Help VW comparing the manual fixes done to the db patch and check-in to db-src
+01:00 - 03:00 - 9147844 Prepare R80p2 patch and send request email
++2.00 - 9095807 Continue implementation of install-zara.bat
+
+[March 18, 2022] - Friday
++8.00 - 29237 Flight to Hong Kong
+
+
+-- $LEAVE Public Holiday 29908
+-- $LEAVE Annual 29237
+-- $ADMIN Timesheet 9116701
+-- $ADMIN General 9116707
+-- $_COMMON RDT Deployment 9088288
+-- SS0 Refresh 9142801
+-- SaaS 9094257
+-- SaaS postgresql baseline 9131158
+-----------------------------------------------------------------------------------------------------
