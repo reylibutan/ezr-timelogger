@@ -1,0 +1,47 @@
+-----------------------------------------------------------------------------------------------------
+[April 11, 2022] - Monday
++0.50 - COM Check and reply to pending messages
+10:45 - xx:xx - 9149369 Prepare db-src change for fdn.web.api.url
++0.25 - 9148914 Check Proffle Preference issues reported by Babylyn
+01:45 - 03:15 - 9148914 Check Proffle Preference issues reported by Babylyn
++0.25 - 9148914 Check Proffle Preference issues reported by Babylyn
+03:30 - 05:00 - COM Discussion with VW about NNOPROD issue related to fdn redirect
++0.25 - STS Scrum
++2.50 - 9148730 Investigation / Support
+
+[April 12, 2022] - Tuesday
++2.00 - 9148730 Investigation / Support
+09:00 - 10:15 - 9148730 Prepare for demo to VW / Demo to VW / Discussion about the issue
+10:45 - 11:15 - 9148730 CPK to r76 and zara-combine (master, r76, r76.6_nno)
++0.50 - 9148730 CPK to zara-fdn [r76.6_nno] branch
++1.00 - 9095778 Testing and test results
++1.00 - 9149878 Implementation and testing
++0.50 - COM Discussion with VW about flex field UDCs
++1.00 - 9149369 db-src change for fdn.web.api.url
++0.25 - STS Scrum
+
+[April 13, 2022] - Wednesday
++0.50 - 9075360 Check pending things for ZAC
++2.00 - 9143558 Initial investigation for the issue
++1.00 - 9149369 Prepare db-src change (to add fdn.web.api.url)
++4.25 - 9146902 Prepare for initial patch demo
++0.25 - STS Scrum
+
+[April 14, 2022] - Thursday
++0.50 - STS Update ticket status and Sprint Schedule
++1.00 - 9094257 Overall support
++2.50 - 9145631 Update wiki for KT
++4.00 - 29237 Emergency Leave due to being locked out from the apartment
+
+[April 15, 2022] - Friday
++8.00 - 29908 Good Friday
+
+-- $LEAVE Public Holiday 29908
+-- $LEAVE Annual 29237
+-- $ADMIN Timesheet 9116701
+-- $ADMIN General 9116707
+-- $_COMMON RDT Deployment 9088288
+-- SS0 Refresh 9142801
+-- SaaS 9094257
+-- SaaS postgresql baseline 9131158
+-----------------------------------------------------------------------------------------------------

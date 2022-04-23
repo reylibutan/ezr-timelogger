@@ -1,0 +1,43 @@
+-----------------------------------------------------------------------------------------------------
+[April 04, 2022] - Monday
++0.75 - COM Discussion with GaryW & investigate possible issue with zara-ops-rdt (gateway)
+09:30 - 12:00 - 9149074 Investigate issue (SOU go-live issue)
+-0.50 - 9146930 Discussion with VW about the SQL query and to update ticket title & description
++1.50 - 9095778 Check why preferences returning an empty list in SS0QA
++0.25 - COM Discussion with Hemant about global user creation issue (zodiacUser is not null even if it doesn't exist)
++0.50 - COM Discussion TT about the new security service response when User doesn't exist in Zodiac
++2.00 - 9145631 Update status and details of pending tickets by Rey / Summarize in document
+
+[April 05, 2022] - Tuesday
++8.00 - 29908 Qingming Festival
+
+[April 06, 2022] - Wednesday
+09:00 - 10:00 - COM Discussion with VW about SOU patch / Find out about SOU patch submitted before /
++2.00 - COM Check create-patch for iaaa-r5
++1.00 - 9089810 OPS-RDT Investigate GaryW's request
++2.75 - 9145631 Prepare for KT
++0.25 - STS Scrum
+05:15 - 06:15 - 9145631 Do KT Session (Day 3)
+
+[April 07, 2022] - Thursday
++0.50 - COM Discussion with BA (Babylyn) about Profile Preference issue in SS1prod
+10:00 - 10:30 - 9142801 Check manifest submission time
++2.50 - 9095778 Make profile preference GET endpoints case insensitive
+02:00 - 02:30 - 9149369 Investigate favorite issue in fdn
++4.00 - 9149528 Create-patch for S0B
+
+[April 08, 2022] - Friday
+09:00 - 09:30 - COM Discussion with VW about tasks / SOU things
++4.00 - 9149582 Fix and prepare SOUUAT patch
++3.25 - 9149369 Retest with http / Retest in SS1PROD / Investigate
++0.25 - STS Scrum
+
+-- $LEAVE Public Holiday 29908
+-- $LEAVE Annual 29237
+-- $ADMIN Timesheet 9116701
+-- $ADMIN General 9116707
+-- $_COMMON RDT Deployment 9088288
+-- SS0 Refresh 9142801
+-- SaaS 9094257
+-- SaaS postgresql baseline 9131158
+-----------------------------------------------------------------------------------------------------
